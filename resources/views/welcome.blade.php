@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soccer Teams</title>
-    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Styles / Scripts -->
     @if (file_exists(public_path('build/manifest.json')) || file_exists(public_path('hot')))
         @vite(['resources/css/app.css', 'resources/js/app.js'])
@@ -30,10 +29,12 @@
             </div>
         </div>
     </nav>
-    
-    <header class="text-center py-20 bg-cover bg-center min-h-screen" style="background-image: url('images/soccer.jpg');">
-        <h2 class="text-4xl text-white font-bold bg-black bg-opacity-50 px-4 py-2 inline-block">Welcome to Soccer Teams</h2>
-        <p class="text-white text-lg mt-2 bg-black bg-opacity-50 px-4 py-2 inline-block">Discover and follow your favorite soccer teams</p>
+
+    <header class="flex flex-col justify-center items-center text-center min-h-screen bg-cover bg-center" style="background-image: url('images/soccer.jpg');">
+        <div class="px-8 py-6 rounded-md flex justify-center items-center gap-5">
+            <h2 class="bg-black bg-opacity-50 min-h-[100px] min-w-[300px] text-4xl text-white font-bold">Welcome to Soccer Teams</h2>
+            <p class="bg-black bg-opacity-50 min-h-[100px] min-w-[300px] text-white text-lg mt-2">Discover and follow your favorite soccer teams</p>
+        </div>
     </header>
 
     <section class="container mx-auto py-10 px-4">

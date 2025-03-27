@@ -1,10 +1,12 @@
 export default {
     content: [
-        './resources/views/**/*.blade.php',
-        './resources/js/**/*.vue'
+      "./resources/views/**/*.blade.php",
+      "./resources/css/**/*.css",
+      "./resources/js/**/*.js",
     ],
     theme: {
-        extend: {},
+      extend: {},
     },
     plugins: [],
-};
+  };
+  
