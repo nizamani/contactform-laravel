@@ -3,6 +3,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FreelancerController;
+use App\Http\Controllers\PaymentController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -37,3 +38,6 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 // freelance form submit
 Route::get('/freelancer/contact', [FreelancerController::class, 'showForm'])->name('freelancer.form');
 Route::post('/freelancer/submit', [FreelancerController::class, 'submitForm'])->name('freelancer.submit');
+
+// example of /pay route with service provider
+Route::get('/pay', [PaymentController::class, 'pay']);
