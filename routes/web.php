@@ -4,6 +4,7 @@ use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\WeatherController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -41,3 +42,5 @@ Route::post('/freelancer/submit', [FreelancerController::class, 'submitForm'])->
 
 // example of /pay route with service provider
 Route::get('/pay', [PaymentController::class, 'pay']);
+
+Route::get('/weather', [WeatherController::class, 'getWeather']);
