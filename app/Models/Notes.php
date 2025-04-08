@@ -7,4 +7,9 @@ use Illuminate\Database\Eloquent\Model;
 class Notes extends Model
 {
     protected $fillable = ['title', 'content']; // Add 'title' here
+
+    public function user()
+    {
+        return $this->belongsTo(User::class);
+    }
 }

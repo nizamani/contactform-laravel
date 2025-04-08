@@ -4,6 +4,7 @@ use App\Http\Controllers\MyController;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\FreelancerController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\UsersController;
 use App\Http\Controllers\WeatherController;
 
 Route::get('/', function () {
@@ -44,3 +45,5 @@ Route::post('/freelancer/submit', [FreelancerController::class, 'submitForm'])->
 Route::get('/pay', [PaymentController::class, 'pay']);
 
 Route::get('/weather', [WeatherController::class, 'getWeather']);
+
+Route::get('/users/addnote/{user}', [UsersController::class, 'addNote']);
